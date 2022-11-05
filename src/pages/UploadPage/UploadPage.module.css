@@ -1,0 +1,7 @@
+.uploadPanel {
+    width: 80vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

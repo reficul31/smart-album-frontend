@@ -1,0 +1,27 @@
+.gridList {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    align-content: flex-start;
+}
+
+.gridListItem {
+    height: 250px;
+}
+
+.gridList li:last-child {
+    flex-grow: 10;
+}
+
+.gridLoading {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gridLoadingIcon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}

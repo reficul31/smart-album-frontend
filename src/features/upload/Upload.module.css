@@ -1,0 +1,94 @@
+.upload {
+    width: 75vw;
+    height: 85vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='white' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+
+.upload img {
+    height: 20vh;
+    width: 20vh;
+    margin: 0 auto;
+}
+
+.uploadText {
+    font-size: large;
+    color: white;
+    width: 30vw;
+    text-align: center;
+    height: 20vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.uploadText p {
+    height: 20px;
+}
+
+.preview {
+    width: 75vw;
+    height: 50vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.uploadPreview {
+    width: 25vw;
+    height: auto;
+    margin: 0 auto;
+}
+
+.uploadForm {
+    width: 40vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.uploadInput {
+    width: 30vw;
+    font-size: 25px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding-left: 5px;
+    margin: 0 auto;
+}
+
+.uploadInput:focus {
+    outline: 0;
+}
+
+.uploadButton {
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    border: 1px solid white;
+    text-align: center;
+    color: white;
+    font-family: monospace;
+    font-size: large;
+    margin: 0 auto;
+    background-color: transparent;
+}
+
+.uploadLoading {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.uploadLoadingIcon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}

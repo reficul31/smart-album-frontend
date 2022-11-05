@@ -1,46 +1,28 @@
-# Getting Started with Create React App and Redux
+# Smart Album Frontend
+A smart photo album which web application that can be searched using natural language through both text and voice. Uploaded photos are automatically tagged using Computer Vision and user provided labels. These labels are then used for searching the smart album for results and display them back to the user.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+## Demo
+Demo              |  Demo 
+:-------------------------:|:-------------------------:
+![Demo 1](/assets/image-1.png)  |  ![Demo 2](/assets/image-2.png)
+![Demo 3](/assets/image-3.png)  |  ![Demo 4](/assets/image-4.png)
 
-## Available Scripts
+## Objective
+1. Build a simple frontend application that allows users to:
+    * i. Make search requests to the GET /search endpoint
+    * ii. Display the results (photos) resulting from the query
+    * iii. Upload new photos using the PUT /photos
+2. Create a S3 bucket for your frontend (B1).
+3. Set up the bucket for static website hosting (same as HW1).
+4. Upload the frontend files to the bucket (B2).
+5. Integrate the API Gateway-generated SDK (SDK1) into the frontend, to connect your API.
+6. Give the frontend user the choice to use voice rather than text to perform
+the search.
+7. Use Amazon Transcribe10 on the frontend to transcribe speech to text (STT) in real time, then use the transcribed text to perform the search, using the same API like in the previous steps.
 
-In the project directory, you can run:
+In the upload form, allow the user to specify one or more custom labels, that will be appended to the list of labels detected automatically by Rekognition (see 2.d.iii above). These custom labels should be converted to a comma-separated list and uploaded as part of the S3 object’s metadata9 using a x-amz-meta-customLabels metadata HTTP header.
+For instance, if you specify two custom labels at upload time, “Sam” and “Sally”, the metadata HTTP header should look like: ‘x-amz-meta-customLabels’: ‘Sam, Sally’
 
-### `npm start`
+## Architecture
+![Architecture](/assets/design.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

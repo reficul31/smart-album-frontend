@@ -9,7 +9,8 @@ const UPLOAD_PATH = '/upload';
 export async function search(text) {
     const args = {
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'x-api-key': 'V2SBl2CW0U55XnuB1oE7n8Lg9foRgL1f0Nu9gL4g'
         },
         params: {
             'q': text

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = 'https://gufizckpdd.execute-api.us-east-1.amazonaws.com/PROD';
+const baseURL = 'https://07hsi49u81.execute-api.us-east-1.amazonaws.com/PROD';
 const client = axios.create({baseURL});
 
 const SEARCH_PATH = '/search';
